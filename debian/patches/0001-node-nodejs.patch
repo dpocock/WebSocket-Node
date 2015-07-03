@@ -1,0 +1,34 @@
+diff --git a/Makefile b/Makefile
+index 39ff645..7916deb 100644
+--- a/Makefile
++++ b/Makefile
+@@ -5,7 +5,7 @@ clean:
+ 	node-gyp clean
+ 
+ autobahn:
+-	@NODE_PATH=lib node test/autobahn-test-client.js --host=127.0.0.1 --port=9000
++	@NODE_PATH=lib nodejs test/autobahn-test-client.js --host=127.0.0.1 --port=9000
+ 
+ autobahn-server:
+-	@NODE_PATH=lib node test/echo-server.js
++	@NODE_PATH=lib nodejs test/echo-server.js
+diff --git a/binding.gyp b/binding.gyp
+index 600f9d1..cf718c8 100644
+--- a/binding.gyp
++++ b/binding.gyp
+@@ -2,13 +2,13 @@
+   'targets': [
+     {
+       'target_name': 'validation',
+-      'include_dirs': ["<!(node -e \"require('nan')\")"],
++      'include_dirs': ["<!(nodejs -e \"require('nan')\")"],
+       'cflags': [ '-O3' ],
+       'sources': [ 'src/validation.cc' ]
+     },
+     {
+       'target_name': 'bufferutil',
+-      'include_dirs': ["<!(node -e \"require('nan')\")"],
++      'include_dirs': ["<!(nodejs -e \"require('nan')\")"],
+       'cflags': [ '-O3' ],
+       'sources': [ 'src/bufferutil.cc' ]
+     }

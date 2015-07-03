@@ -1,0 +1,18 @@
+diff --git a/lib/browser.js b/lib/browser.js
+index 7dce5a9..16c641b 100644
+--- a/lib/browser.js
++++ b/lib/browser.js
+@@ -1,5 +1,6 @@
+ var _global = (function() { return this; })();
+ var nativeWebSocket = _global.WebSocket || _global.MozWebSocket;
++var websocket_version = require('./version');
+ 
+ 
+ /**
+@@ -31,5 +32,5 @@ function W3CWebSocket(uri, protocols) {
+  */
+ module.exports = {
+     'w3cwebsocket' : nativeWebSocket ? W3CWebSocket : null,
+-    'version'      : require('./version')
++    'version'      : websocket_version
+ };

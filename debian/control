@@ -1,0 +1,23 @@
+Source: node-websocket
+Section: web
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Daniel Pocock <daniel@pocock.pro>
+Build-Depends: debhelper (>= 9.0.0), nodejs-dev, node-uglify, node-gyp, node-nan
+Standards-Version: 3.9.5
+Homepage: https://github.com/theturtle32/WebSocket-Node
+Vcs-Browser: https://github.com/dpocock/websocket
+Vcs-Git: https://github.com/dpocock/websocket
+
+Package: libjs-websocket
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: javascript-common
+Description: WebSocket implementation for NodeJS
+ An implementation of the WebSocket API for NodeJS.
+
+Package: node-websocket
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs (>= 0.6.19~dfsg1-3), libjs-websocket, node-nan, node-typedarray-to-buffer, node-debug
+Description: WebSocket implementation for NodeJS
+ An implementation of the WebSocket API for NodeJS.

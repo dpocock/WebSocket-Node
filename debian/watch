@@ -1,0 +1,2 @@
+version=3
+https://github.com/theturtle32/WebSocket-Node/tags .*/archive/v(\d[\d\.]+)\.tar\.gz

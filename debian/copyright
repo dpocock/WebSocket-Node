@@ -1,0 +1,17 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: node-websocket
+Upstream-Contact: Brian McKelvey <theturtle32@gmail.com>
+Source: https://github.com/theturtle32/WebSocket-Node
+
+Files: *
+Copyright: 2010-2015, Copyright 2010-2015 Brian McKelvey
+License: Apache-2.0
+
+Files: debian/*
+Copyright: 2015, Daniel Pocock
+License: Apache-2.0
+
+License: Apache-2.0
+ The Apache-2.0 license can be found in /usr/share/common-licenses/Apache-2.0
+ on your Debian system.
+
